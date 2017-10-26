@@ -1,3 +1,21 @@
+/** Sticky Footer **/
+html { 
+    height: 100%; 
+}
+body{
+    min-height:100%; 
+    position:relative; 
+    padding-bottom:50px; 
+}
+footer{
+    background:#101010;
+    color:#fff;
+    text-align:center;
+    height: 50px;
+    position: absolute; 
+    left: 0 ; right: 0; bottom: 0; 
+}
+/** Misc styles **/
 #result p{
     padding:20%;
 }
