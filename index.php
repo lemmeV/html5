@@ -15,33 +15,15 @@ include_once 'includes/navigation.php';
     <section class="container">
         <div class="row">
             <div class="col-md-6">
-                <form action="index.php" method="post">
-
-                    <div class="form-group">
-                        <label for="date">Vali kuupäev:</label>
-                        <select class="form-control" name="date">
-                            <option value="">27.10.2017</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" checked>Päev
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio">Öö
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label for="city">Vali linn/piirkond:</label>
-                        <select class="form-control" name="city">
-                            <option value="tallinn">Tallinn</option>
-                        </select>
-                    </div>
-                    <button id="query" type="submit" class="btn btn-default">Rakenda valikud</button>
-                </form>
+                <progress max="3" value="1"></progress>
+                <progress max="3" value="2"></progress>
+                <progress max="3" value="3"></progress>
+                <meter min="0" max="100" value="70">
+                70 out of 100
+                </meter>
             </div>
-            <div class="col-md-6" id="result">
-                <p>27.10.2017 Viljandis on temperatuur -3</p>
+            <div class="col-md-6">
+
 
             </div>
         </div>

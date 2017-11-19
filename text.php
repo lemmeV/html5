@@ -27,11 +27,15 @@ include_once 'includes/navigation.php';
             <div class="col-md-6">
                 <h1>Algne tekst</h1>
                 <p>
-                <?php echo $fullText; ?>
+                <?php echo $original_text; ?>
                 </p>
                 
             </div>
             <div class="col-md-6">
+
+                <?php
+
+                ?>
             </div>
         </div>
     </section>
