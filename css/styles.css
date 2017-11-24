@@ -17,5 +17,10 @@ footer{
 }
 /** Misc styles **/
 #result p{
-    padding:20%;
+    padding: 4%;
+}
+@media (max-width: 420px) {
+    #result p{
+        padding: 4% 0;
+    }
 }
