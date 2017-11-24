@@ -10,11 +10,16 @@
 class Forecast
 {
     /**
-     * Function 
+     * Gets the list of dates that are available on the Ilmateenistus XML
      */
+
     public static function getDateList() {
 
+        // Retrieve the XML data with SimpleXMLElement class
+
         $xml_data = new SimpleXMLElement(URL, 0, true, "", false);
+
+        // Prints out a list of date options
 
         foreach ($xml_data as $day) {
 
@@ -26,10 +31,17 @@ class Forecast
         }
 
     }
+    /**
+     * Gets the list of places that are available on the Ilmateenistus XML
+     */
 
     public static function getDayPlaces() {
 
+        // Retrieve the XML data with SimpleXMLElement class
+
         $xml_data = new SimpleXMLElement(URL, 0, true, "", false);
+
+        // Prints out a list of place options
 
         foreach ($xml_data as $day_data) {
 
@@ -49,27 +61,33 @@ class Forecast
 
     }
 
+    /**
+     * @param $date - takes in date the user selected
+     * @param $time - takes in time of day/night the user selected
+     * Prints out the forecast text
+     */
+
     public static function getDateForecast($date,$time)
     {
+        // Retrieve the XML data with SimpleXMLElement class
 
         $xml_data = new SimpleXMLElement(URL, 0, true, "", false);
+
+        // prints out a forecast text from either day or night
 
         foreach ($xml_data as $day) {
 
             if ($day->attributes()->date == $date) {
 
-
                 if ($time == 'night') {
 
                     foreach ($day->night as $d) {
-
                         echo $d->text;
                     }
 
                 } elseif ($time == 'day') {
 
                     foreach ($day->day as $d) {
-
                         echo $d->text;
                     }
                 } else {}

@@ -47,6 +47,10 @@ include_once 'includes/navigation.php';
                 <p>
                     <?php
 
+                    /**
+                     *  Catch the selected options and return the the forecast of that day
+                     */
+
                     if(isset($_POST['submit'])) {
 
                         echo '<strong>Kuupäev: </strong>' . $_POST['date']. '<br>';
