@@ -2,7 +2,7 @@
 
 $currentPageTitle = "Tekstitöötlus";
 
-include_once 'functions/stringFunctions.php'; 
+include_once 'functions/ParseText.php';
 include_once 'functions/functions.php'; 
 include_once 'includes/header.php'; 
 include_once 'includes/navigation.php'; 
@@ -27,13 +27,16 @@ include_once 'includes/navigation.php';
             <div class="col-md-6">
                 <h1>Algne tekst</h1>
                 <p>
-                <?php echo $original_text; ?>
+                <?php
+                $result = new ParseText();
+                echo $result->original_text; ?>
                 </p>
                 
             </div>
             <div class="col-md-6">
 
                 <?php
+                $result->getNames();
 
                 ?>
             </div>
